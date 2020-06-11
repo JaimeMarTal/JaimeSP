@@ -22,6 +22,8 @@ public class Persona {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	
+	private String img;
 
 	private String nombre;
 
@@ -33,6 +35,8 @@ public class Persona {
 	private Integer altura;
 	
 	private LocalDate fnac;
+	
+	//============================//
 
 	@ManyToOne
 	private Pais nace;
@@ -196,6 +200,22 @@ public class Persona {
 
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
+	}
+
+
+
+
+
+	public String getImg() {
+		return img;
+	}
+
+
+
+
+
+	public void setImg(String img) {
+		this.img = img;
 	}
 
 }
